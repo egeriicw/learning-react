@@ -1,5 +1,29 @@
 import logo from './logo.svg';
 import './App.css';
+import React, {useState} from 'react';
+
+import { Button } from "@blueprintjs/core";
+
+
+class Test extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {      
+      id: 1,      
+      name: "test"    
+    };   
+  }
+
+  render() {
+    return (
+      <div>
+        <p>{this.state.id}</p>
+        <p>{this.state.name}</p>
+      </div>
+    );
+  }
+}
+
 
 function App() {
   return (
@@ -15,8 +39,11 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Learn ReactJS
         </a>
+        <Test></Test>
+
+        <Button icon="add" alignText="center"></Button>
       </header>
     </div>
   );
